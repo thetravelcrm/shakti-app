@@ -13,18 +13,15 @@
         android:layout_centerInParent="true"
          android:layout_centerHorizontal="true">
 
-        <com.wang.avi.AVLoadingIndicatorView
-
+        <ProgressBar
             android:id="@+id/avi"
-            style="@style/AVLoadingIndicatorView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/_40sdp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            app:indicatorColor="@color/button_color"
-            app:indicatorName="BallPulseIndicator"
+            android:indeterminateTint="@color/button_color"
             tools:ignore="MissingConstraints" />
 
         <pl.droidsonroids.gif.GifImageView
