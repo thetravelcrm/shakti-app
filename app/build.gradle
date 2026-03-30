@@ -14,12 +14,7 @@ android {
 
 
     signingConfigs {
-        config {
-            keyAlias 'shakti'
-            keyPassword 'shakti'
-            storeFile file('D:/damas Projects/Android/JKS/shakti.jks')
-            storePassword 'shakti'
-        }
+        // release signing config - keystore not available in CI, debug APK used instead
     }
 
     compileSdkVersion 29
