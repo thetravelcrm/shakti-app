@@ -13,7 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.bm.library.PhotoView;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.bumptech.glide.Glide;
 import com.vincent.filepicker.Constant;
 import com.vincent.filepicker.R;
