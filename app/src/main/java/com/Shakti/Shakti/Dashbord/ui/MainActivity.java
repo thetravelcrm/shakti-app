@@ -163,20 +163,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SharedPreferences myPreferences = getSharedPreferences(ApplicationConstant.INSTANCE.prefNamePref, MODE_PRIVATE);
 
         String balanceResponse = myPreferences.getString(ApplicationConstant.INSTANCE.Loginrespose, null);
-        RegisterResponse balanceCheckResponse = new Gson().fromJson(balanceResponse, RegisterResponse.class);
+        RegisterResponse balanceCheckResponse = balanceResponse != null ? new Gson().fromJson(balanceResponse, RegisterResponse.class) : null;
         /// Edited by farhan
         String profileResponse=myPreferences.getString(ApplicationConstant.INSTANCE.setProfile,null);
         if(profileResponse!=null) {
-            final ProfileResponse.ProfileList PR = new Gson().fromJson(profileResponse, ProfileResponse.class).getList().get(0);
-            UserName=PR.getfName()+" "+PR.getlName();
-            Photo=PR.getPhoto();
+            try {
+                final ProfileResponse.ProfileList PR = new Gson().fromJson(profileResponse, ProfileResponse.class).getList().get(0);
+                UserName=PR.getfName()+" "+PR.getlName();
+                Photo=PR.getPhoto();
+            } catch (Exception e) {
+                Log.e("MainActivity", "Error parsing profile: " + e.getMessage());
+            }
         }
-        else{
+        else if(balanceCheckResponse!=null){
             Photo=balanceCheckResponse.getPhoto();
             UserName=balanceCheckResponse.getName();
         }
         ///////////////////
-        userName.setText(""+UserName +" - "+balanceCheckResponse.getUserCode()+"");
+        String userCode = balanceCheckResponse != null ? balanceCheckResponse.getUserCode() : "";
+        userName.setText(""+UserName +" - "+userCode+"");
 
 
 
@@ -185,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         requestOptions.error(R.drawable.customer_support);
 
 
-        Log.e("getPhoto","getPhoto :   "+balanceCheckResponse.getPhoto());
+        Log.e("getPhoto","getPhoto :   "+(balanceCheckResponse != null ? balanceCheckResponse.getPhoto() : "null"));
         Glide.with(this)
                 .setDefaultRequestOptions(requestOptions)
                 .load(Photo)

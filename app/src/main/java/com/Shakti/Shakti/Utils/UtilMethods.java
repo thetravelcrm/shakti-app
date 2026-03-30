@@ -158,12 +158,10 @@ public enum UtilMethods {
 
                                 }
                                 else {
-
-                                    horizantal.setVisibility(View.GONE);
-                                    image.setVisibility(View.VISIBLE);
-
-                                    //  UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
-
+                                    if (horizantal != null)
+                                        horizantal.setVisibility(View.GONE);
+                                    if (image != null)
+                                        image.setVisibility(View.VISIBLE);
                                 }
 
 
@@ -176,7 +174,7 @@ public enum UtilMethods {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -192,7 +190,7 @@ public enum UtilMethods {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -523,7 +521,7 @@ public enum UtilMethods {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -539,7 +537,7 @@ public enum UtilMethods {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -879,7 +877,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -895,7 +893,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -928,7 +926,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
             call.enqueue(new Callback<RegisterResponse>() {
                 @Override
                 public void onResponse(Call<RegisterResponse> call, final retrofit2.Response<RegisterResponse> response) {
-                    Log.e("FeedBackCategoryListres", "is : " + new Gson().toJson(response.body()).toString());
+                    Log.e("FeedBackCategoryListres", "is : " + (response.body() != null ? new Gson().toJson(response.body()) : "null"));
 
                     if (response != null) {
                         if (loader != null) {
@@ -956,7 +954,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -972,7 +970,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1040,7 +1038,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1056,7 +1054,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1122,7 +1120,7 @@ else
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1138,7 +1136,7 @@ else
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1199,7 +1197,7 @@ else
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1215,7 +1213,7 @@ else
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1275,7 +1273,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1291,7 +1289,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1352,7 +1350,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1368,7 +1366,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1429,7 +1427,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1445,7 +1443,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1490,7 +1488,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1506,7 +1504,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1554,7 +1552,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1570,7 +1568,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1619,7 +1617,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1635,7 +1633,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1682,7 +1680,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1698,7 +1696,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1752,7 +1750,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1768,7 +1766,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1822,7 +1820,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1838,7 +1836,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -1927,7 +1925,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -1943,7 +1941,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2024,7 +2022,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2040,7 +2038,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2143,7 +2141,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2159,7 +2157,7 @@ if(response.body().getStatuscode().equalsIgnoreCase("1")){
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2363,7 +2361,7 @@ public void setConstruction(Context context, String setConstruction) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2379,7 +2377,7 @@ public void setConstruction(Context context, String setConstruction) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2434,7 +2432,7 @@ public void setConstruction(Context context, String setConstruction) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2450,7 +2448,7 @@ public void setConstruction(Context context, String setConstruction) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2519,7 +2517,7 @@ public void setConstruction(Context context, String setConstruction) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2535,7 +2533,7 @@ public void setConstruction(Context context, String setConstruction) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2606,7 +2604,7 @@ public void setConstruction(Context context, String setConstruction) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2622,7 +2620,7 @@ public void setConstruction(Context context, String setConstruction) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2700,7 +2698,7 @@ public void setConstruction(Context context, String setConstruction) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2716,7 +2714,7 @@ public void setConstruction(Context context, String setConstruction) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2794,7 +2792,7 @@ public void PurchaseDealerReport(final Context context,String ProductID,String S
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2810,7 +2808,7 @@ public void PurchaseDealerReport(final Context context,String ProductID,String S
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2886,7 +2884,7 @@ public void SaleDealerReport(final Context context,String ProductID, final Loade
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2902,7 +2900,7 @@ public void SaleDealerReport(final Context context,String ProductID, final Loade
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -2974,7 +2972,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -2990,7 +2988,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3060,7 +3058,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3076,7 +3074,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3150,7 +3148,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3166,7 +3164,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3239,7 +3237,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3255,7 +3253,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3411,7 +3409,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3427,7 +3425,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3502,7 +3500,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3518,7 +3516,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3578,7 +3576,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3594,7 +3592,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3650,7 +3648,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3666,7 +3664,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3723,7 +3721,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3739,7 +3737,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3795,7 +3793,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3811,7 +3809,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3866,7 +3864,7 @@ public void AgentReport(final Context context, final Loader loader) {
                                 UtilMethods.INSTANCE.Failed(context, response.body().getMsg(),0);
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3882,7 +3880,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -3951,7 +3949,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -3967,7 +3965,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4035,7 +4033,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4051,7 +4049,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4124,7 +4122,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4140,7 +4138,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4213,7 +4211,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4229,7 +4227,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4297,7 +4295,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4313,7 +4311,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4379,7 +4377,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4395,7 +4393,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4520,7 +4518,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4536,7 +4534,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4601,7 +4599,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4617,7 +4615,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4684,7 +4682,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4700,7 +4698,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4765,7 +4763,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4781,7 +4779,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4858,7 +4856,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4874,7 +4872,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -4949,7 +4947,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -4965,7 +4963,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5034,7 +5032,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5050,7 +5048,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5126,7 +5124,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5142,7 +5140,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5216,7 +5214,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5232,7 +5230,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5306,7 +5304,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5322,7 +5320,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5392,7 +5390,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5408,7 +5406,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5477,7 +5475,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5493,7 +5491,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5562,7 +5560,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5578,7 +5576,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5719,7 +5717,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5735,7 +5733,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5856,7 +5854,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -5872,7 +5870,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
@@ -5985,7 +5983,7 @@ public void AgentReport(final Context context, final Loader loader) {
 
                             }
                         } catch (Exception ex) {
-                            Log.e("startelistexception", ex.getMessage());
+                            Log.e("startelistexception", ex.getMessage() != null ? ex.getMessage() : "unknown error");
                             if (loader != null) {
                                 if (loader.isShowing())
                                     loader.dismiss();
@@ -6001,7 +5999,7 @@ public void AgentReport(final Context context, final Loader loader) {
                         if (loader.isShowing())
                             loader.dismiss();
                     }
-                    Log.e("startelistonFailure", t.getMessage());
+                    Log.e("startelistonFailure", t.getMessage() != null ? t.getMessage() : "unknown error");
                 }
             });
         } catch (Exception ex) {
