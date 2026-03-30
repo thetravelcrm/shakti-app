@@ -154,7 +154,6 @@ public class ImageBrowserActivity extends BaseActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             PhotoView view = new PhotoView(ImageBrowserActivity.this);
-            view.enable();
             view.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
             Glide.with(ImageBrowserActivity.this)
