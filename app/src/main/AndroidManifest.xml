@@ -23,6 +23,13 @@
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
 
+    <!--suppress AndroidDomInspection -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+    </queries>
+
     <application
         android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
@@ -124,6 +131,16 @@
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_RSaNE7T0U1My4g" />
 
+        <!-- Fix android:exported for Razorpay library components (required for targetSdk 34) -->
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="false"
+            tools:node="merge" />
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false"
+            tools:node="merge" />
+
         <activity
             android:name=".Dashbord.ui.WebViewActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
@@ -153,7 +170,8 @@
             android:name=".Login.ui.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".Splash.ui.Splash">
+        <activity android:name=".Splash.ui.Splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -179,12 +197,14 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name=".Notification.service.MyFirebaseMessagingService">
+        <service android:name=".Notification.service.MyFirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Notification.service.MyFirebaseInstanceIDService">
+        <service android:name=".Notification.service.MyFirebaseInstanceIDService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
