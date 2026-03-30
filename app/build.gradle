@@ -5,6 +5,7 @@ apply plugin: 'com.google.gms.google-services'
 
 
 android {
+    namespace 'com.Shakti.Shakti'
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
@@ -66,7 +67,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'com.mikhaellopez:circularimageview:3.0.2'
     implementation 'me.philio:pinentryview:1.0.6'
-    implementation 'com.razorpay:checkout:1.5.16'
+    implementation 'com.razorpay:checkout:1.6.33'
     implementation 'com.github.rampo.updatechecker:library:2.1.8'
     implementation 'org.jsoup:jsoup:1.10.2'
     implementation 'com.facebook.android:facebook-login:[5,6)'
