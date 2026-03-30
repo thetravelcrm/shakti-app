@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:layout_marginTop="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:text="  Date"
+            android:id="@+id/Date"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+
+
+
+
+
+
+        <View
+            android:background="@color/colorBackground"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:id="@+id/quantity"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+ <View
+            android:background="@color/colorBackground"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:text="Credit"
+            android:id="@+id/credit"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+        <View
+            android:background="@color/colorBackground"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:id="@+id/product"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

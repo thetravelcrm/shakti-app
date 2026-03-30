@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="42dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp"
+    tools:context=".Dashbord.ui.HomeFragment">
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="Medium Text"
+        android:gravity="center"
+        android:background="#eeeef8"
+        android:textStyle="bold"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/_10sdp"
+          android:textAllCaps="true"
+        android:singleLine="true"
+        android:textColor="@color/black"
+       />
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/veryfiside"
+     android:visibility="gone"
+android:layout_gravity="left"
+
+    android:layout_width="60dp"
+    android:layout_height="match_parent"
+        android:text="Medium Text"
+        android:gravity="center"
+    android:textStyle="bold"
+    android:textSize="10dp"
+    android:padding="5dp"
+    android:layout_margin="@dimen/_5sdp"
+          android:textAllCaps="true"
+        android:singleLine="true"
+        android:textColor="@color/blue"
+       />
+
+</LinearLayout>
+
+

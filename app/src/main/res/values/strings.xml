@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">Shakti</string>
+
+    //////////////////////////////////////
+    <string name="network_error_title">Network Error!</string>
+    <string name="err_msg_mobile">Cannot be empty</string>
+    <string name="err_msg_email">Email Cannot be empty</string>
+    <string name="err_msg_username">First Name Cannot be empty</string>
+    <string name="err_msg_contact">Contact Number Cannot be Empty</string>
+    <string name="err_msg_lastname">Last Name Cannot be Empty</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+
+    <string name="network_error_message">Please check your network connection and try again.</string>
+    <string name="attention_error_title">Attention!</string>
+    <string name="successful_title">Successful!</string>
+
+    <string name="err_msg_new_pass">Please Enter Your New Password</string>
+    <string name="err_msg_cnf_pass">Please Enter Your Confirm Password</string>
+    <string name="err_msg_match_pass">New Password and Confirm Password does not match.</string>
+    <string name="err_msg_old_pass">Please Enter Your Old Password</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="drawer_open">drawer open</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="err_msg_bagpurchased">Enter Purchased Quantity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="mapView">Map View</string>
+
+
+    ////////////////// APP Language English ////////////
+    <string name="MyAccount">My Account</string>
+    <string name="Video">Video</string>
+    <string name="WishKaro">Wish Karo</string>
+    <string name="RequestTechExpress">Request Tech Express</string>
+    <string name="Feedback">Feedback</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="Logout">Logout</string>
+
+    <string name="SubmitPurchase">&#160;&#160;Submit Purchase</string>
+    <string name="Redemption">Redemption</string>
+    <string name="Reports">Reports</string>
+    <string name="Earned">Earned</string>
+    <string name="Redeemed">Redeemed</string>
+    <string name="Remaining">Remaining</string>
+    <string name="RecentPurchase">&#160;&#160;RECENT PURCHASE </string>
+    <string name="RecentSale">&#160;&#160;Recent Sale</string>
+    <string name="RecentRedemption">&#160;&#160;RECENT REDEMPTION </string>
+    <string name="ViewAll">View All</string>
+    <string name="Status">  Status</string>
+    <string name="Date">  Date</string>
+    <string name="Orderno">Order no</string>
+    <string name="Sitename">Site name</string>
+    <string name="Dealer">Dealer</string>
+    <string name="SelectDealer">Select Dealer</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Points">Points</string>
+    <string name="ProductName">Product Name</string>
+    <string name="RedeemPoints">Redeem Points</string>
+    <string name="Product">Product</string>
+    <string name="Pending">Pending</string>
+    <string name="Approved">Approved</string>
+    <string name="Delevered">Delevered</string>
+    <string name="Rejected">Rejected</string>
+    <string name="Notification">Notification</string>
+    <string name="ViewProfile">View Profile</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="KYCUpdate">KYC Update</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="ChangeMobileNumber">Change Mobile Number</string>
+    <string name="ProfileDetails">PROFILE DETAILS</string>
+    <string name="AgentType">Agent Type</string>
+    <string name="AgentTypestar">Agent Type*</string>
+    <string name="FirstName">First Name</string>
+    <string name="FirstNamestar">First Name *</string>
+    <string name="LastName">Last Name</string>
+    <string name="LastNamestar">Last Name *</string>
+    <string name="Mobile">Mobile</string>
+    <string name="ContactNumber">Contact Number</string>
+    <string name="ContactNumberstar">Contact Number *</string>
+    <string name="WhatsappNumber">Whatsapp Number</string>
+    <string name="State">State</string>
+    <string name="Statestar">State *</string>
+    <string name="SelectState">Select State</string>
+    <string name="District">District</string>
+    <string name="SelectDistrict">Select District</string>
+    <string name="Districtstar">District *</string>
+    <string name="Block">Block</string>
+    <string name="AddressonAADHAAR">Address on AADHAAR</string>
+    <string name="DateofBirth">Date of Birth</string>
+    <string name="KYCDetails">KYC Details</string>
+    <string name="AAdharNumber">AAdhar Number</string>
+    <string name="GSTNumber">GST Number</string>
+    <string name="PanNumber">Pan Number</string>
+    <string name="UpdateAADHAARFront">Update AADHAAR Front</string>
+    <string name="UpdateAADHAARBACK">Update AADHAAR BACK</string>
+    <string name="UpdateKYC">Update KYC</string>
+    <string name="YourRegisterNumberis">Your Register Number is</string>
+    <string name="SendOTPtochangepassword">Send OTP to change password</string>
+    <string name="Cancel">Cancel</string>
+    <string name="SendOTP">Send OTP</string>
+    <string name="NewSitePurchase">New Site &amp; Purchase</string>
+    <string name="ExistingSitePurchase">Existing Site &amp; Purchase</string>
+    <string name="SiteType">Site Type</string>
+    <string name="SiteTypestar">Site Type *</string>
+    <string name="SelectSiteType">Select Site Type</string>
+    <string name="SiteOwnerName">Site Owner Name</string>
+    <string name="SiteOwnerNamestar">Site Owner Name *</string>
+    <string name="SiteMobile">Site Mobile *</string>
+    <string name="SiteAddress">Site Address *</string>
+    <string name="SiteStartDate">Site Start Date</string>
+    <string name="AddPurchase">Add Purchase</string>
+    <string name="SubmitSiteandPurchase">Submit Site and Purchase</string>
+    <string name="SiteDetails">SITE DETAILS</string>
+    <string name="SelectSite">Select Site</string>
+
+    <string name="ProductType">Product Type</string>
+    <string name="Purchased">Purchased</string>
+    <string name="BuyNow">&#160;&#160;&#160;&#160;Buy Now&#160;&#160;&#160;&#160;</string>
+    <string name="Reward">Reward</string>
+    <string name="RewardRedeem">Reward Redeem</string>
+    <string name="PurchaseStatus">Purchase Status</string>
+    <string name="RedemptionHistory">Redemption History</string>
+    <string name="EarnPointsStatement">Earn Points Statement</string>
+    <string name="PointStatus">Point Status</string>
+    <string name="MySites">My Sites</string>
+    <string name="FilterReport">Filter Report</string>
+    <string name="Remark">Remark</string>
+    <string name="RewardProduct">Reward Product</string>
+
+    <string name="Earn">Earn</string>
+    <string name="PointsCredit">Points Credit</string>
+    <string name="Redeem">Redeem</string>
+    <string name="PointsRedeem">Points Redeem</string>
+    <string name="SiteOwnerNo">Site Owner No</string>
+    <string name="StartDate">Start Date</string>
+    <string name="AgentName">Agent Name</string>
+    <string name="AgentMobileNumber">Agent Mobile Number</string>
+    <string name="View">View</string>
+    <string name="DealerList">Dealer List</string>
+    <string name="AgentList">Agent List</string>
+    <string name="CompanyName">Company Name</string>
+    <string name="S.No">S.No</string>
+
+    <string name="Share">Share</string>
+    <string name="Event">Event</string>
+    <string name="KnowMore">Know More</string>
+    <string name="Agent">Agent</string>
+    <string name="Language">Language</string>
+    <string name="PurchaseDate">Purchase Date</string>
+    <string name="Purchase">Purchase</string>
+    <string name="AnniversaryDate">Anniversary Date</string>
+    <string name="PurchaseReport">Purchase Report</string>
+    <string name="SaleReport">Sale Report</string>
+    <string name="EntryDate">Entry Date</string>
+    <string name="PendingSite">Pending Site</string>
+
+    <string name="Brand">Brand</string>
+
+    <string name="Verify">Verify</string>
+    <string name="SubAdmin">Sub Admin</string>
+    <string name="VerifiedSites">Verified Sites</string>
+    <string name="SiteOwnerMobileNo">Site Owner Mobile No</string>
+    <string name="AgentMobileNo">Agent Mobile No</string>
+    <string name="SiteImage">Site Image</string>
+    <string name="UpdateProfile">Update Profile</string>
+    <string name="New">New</string>
+    <string name="Previous">Previous</string>
+    <string name="TypeWish">Type Wish</string>
+    <string name="Submit">Submit</string>
+    <string name="Time">Time</string>
+    <string name="ContactPersonName">Contact Person Name</string>
+    <string name="ContactPersonMobileNumber">Contact Person Mobile Number</string>
+    <string name="ContactPerson">Contact Person</string>
+    <string name="Contactpersonno.">Contact person no.</string>
+    <string name="Description">Description</string>
+    <string name="January">\u0020\u0020January</string>
+    <string name="February">&#160;&#160;February</string>
+    <string name="March">  March</string>
+    <string name="April">  April</string>
+    <string name="May">  May</string>
+    <string name="Jun">  Jun</string>
+    <string name="July">  July</string>
+    <string name="August">  August</string>
+    <string name="September">  September</string>
+    <string name="October">  October</string>
+    <string name="November">  November</string>
+    <string name="December">  December</string>
+
+    <string name="SelectLanguage">Select the Language</string>
+    <string name="Search">SEARCH</string>
+    <string name="PURCHASEDETAILS">PURCHASE DETAILS</string>
+    <string name="ruppee">Rs.</string>
+    <string name="Norecord">No records found</string>
+    <string name="Doyouwanttologout">Do you want to logout?</string>
+    <string name="Yes">Yes</string>
+    <string name="PleaseclickBACKagaintoexit">Please click BACK again to exit</string>
+    <string name="APPROVE">APPROVE</string>
+    <string name="REJECT">REJECT</string>
+    <string name="AgentPurchaseVarification">Agent Purchase Varification</string>
+    <string name="AgentPurchaseDETAILS">AGENT PURCHASE DETAILS</string>
+</resources>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ReportAll.Activity.KycUpdateActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/registerdetail"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/AAdharNumber"
+                            android:textSize="14dp"
+
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect"
+                            android:padding="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            >
+
+
+                            <EditText
+                                android:id="@+id/Aadhaarcardnumber"
+                                android:drawableTint="@color/lohoyint"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:singleLine="true"
+                                android:clickable="false"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/black"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="@string/GSTNumber"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect"
+                            android:padding="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            >
+
+
+                            <EditText
+                                android:id="@+id/GSTnumber"
+                                android:drawableTint="@color/lohoyint"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:singleLine="true"
+                                android:clickable="false"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/black"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:text="@string/PanNumber"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect"
+                            android:padding="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            >
+
+
+                            <EditText
+                                android:id="@+id/PANnumber"
+                                android:drawableTint="@color/lohoyint"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:singleLine="true"
+                                android:clickable="false"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/black"
+                                />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/UpdateAADHAARFront"
+                        android:textSize="14dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"/>
+
+                    <RelativeLayout
+
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/rectbackgra"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="250dp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:scaleType="fitXY"
+                                android:padding="8dp"
+
+                                android:background="@drawable/ic_upload"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:id="@+id/adharimageclick" />
+                            <TextView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_below="@+id/tv_choose_photo"
+                                android:textColor="@color/colorPrimary"
+                                android:background="@drawable/ic_upload"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:id="@+id/chooseaadharcard"
+                                android:visibility="gone"
+                                />
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/UpdateAADHAARBACK"
+                        android:textSize="14dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"/>
+
+                    <RelativeLayout
+
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/rectbackgra"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="250dp">
+
+
+                            <TextView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_below="@+id/tv_choose_photo"
+                                android:textColor="@color/colorPrimary"
+                                android:background="@drawable/ic_upload"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:visibility="gone"
+                                android:id="@+id/chooseaadharback"
+                                />
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:scaleType="fitXY"
+                                android:padding="8dp"
+
+                                android:background="@drawable/ic_upload"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:id="@+id/adharimagebackclick" />
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+                    <Button
+                        android:id="@+id/bt_register"
+                        style="@android:style/Widget.Button.Small"
+                        android:layout_width="match_parent"
+                        android:layout_margin="@dimen/_50sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundbtn"
+                        android:backgroundTint="@color/button_color"
+                        android:text="@string/UpdateKYC"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

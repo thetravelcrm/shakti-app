@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/myaccount"
+             android:icon="@drawable/customer_support"
+               android:title="@string/MyAccount" >
+        </item>
+
+        <item
+            android:id="@+id/video"
+            android:icon="@drawable/ic_shakti_video"
+               android:title="@string/Video" >
+        </item>
+
+
+ <item
+    android:id="@+id/Events"
+     android:visible="false"
+     android:icon="@drawable/ic_shakti_events"
+     android:title="@string/Event" >
+        </item>
+
+        <item
+            android:icon="@drawable/ic_shakti_wish_karo"
+            android:id="@+id/wishkaro"
+            android:title="@string/WishKaro" >
+        </item>
+
+
+        <item
+            android:id="@+id/Requesttechexpress"
+            android:icon="@drawable/ic_shakti_request_tech"
+            android:title="@string/RequestTechExpress" >
+        </item>
+
+
+   <item
+       android:id="@+id/knowmore"
+       android:visible="false"
+             android:icon="@drawable/ic_shakti_know_more"
+            android:title="@string/KnowMore" >
+        </item>
+
+        <item
+            android:id="@+id/faq"
+            android:visible="false"
+            android:icon="@drawable/ic_shakti_faq"
+            android:title="FAQ" >
+        </item>
+
+      <item
+          android:id="@+id/Feedback"
+             android:icon="@drawable/ic_shakti_feedback"
+            android:title="@string/Feedback" >
+        </item>
+
+
+
+
+        <item
+            android:id="@+id/Language"
+            android:visible="true"
+             android:icon="@drawable/ic_shakti_change_language"
+            android:title="@string/Language" >
+        </item>
+
+
+
+
+        <item
+            android:id="@+id/ContactUS"
+            android:icon="@drawable/ic_shakti_contact_us"
+            android:title="@string/ContactUs" >
+        </item>
+
+
+
+        <item
+            android:id="@+id/share"
+            android:visible="false"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="@string/Share" >
+        </item>
+
+
+
+        <item
+            android:id="@+id/TermsCondition"
+            android:visible="false"
+            android:icon="@drawable/ic_shakti_terms_and_conditions"
+            android:title="Terms &amp; Conditions" >
+        </item>
+
+
+        <item
+            android:id="@+id/PrivacyPolicy"
+            android:visible="false"
+            android:icon="@drawable/ic_shakti_privacy_policy"
+            android:title="Privacy Policy" >
+        </item>
+
+
+
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/Logout" >
+        </item>
+
+
+
+
+
+
+
+
+    </group>
+
+
+    <item
+        android:title="Setting">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewAll.View_Detail_four_Activity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+         android:id="@+id/horizantal"
+
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                 android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/colorBackground"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                     <LinearLayout
+                         android:id="@+id/LI_Product"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_Product"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Product"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+
+                        <ListView
+                            android:id="@+id/li_Product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+
+                        </ListView>
+
+
+
+                    </LinearLayout>
+
+
+                     <LinearLayout
+                         android:id="@+id/LI_January"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_January"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/January"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+
+                        <ListView
+                            android:id="@+id/li_January"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+                    </LinearLayout>
+
+
+                     <LinearLayout
+                         android:id="@+id/LI_February"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_February"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/February"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+
+                        <ListView
+                            android:id="@+id/li_February"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+                    </LinearLayout>
+
+
+                     <LinearLayout
+                         android:id="@+id/LI_March"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_March"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/March"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+
+                        <ListView
+                            android:id="@+id/li_March"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                     <LinearLayout
+                         android:id="@+id/LI_April"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_April"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/April"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+                        <ListView
+                            android:id="@+id/li_April"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+
+                     <LinearLayout
+                         android:id="@+id/LI_May"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_May"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/May"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/Mayli"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_Jun"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_Jun"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Jun"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_Jun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_July"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_July"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/July"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_July"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_August"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_August"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/August"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_August"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_September"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_September"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/September"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_September"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_October"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_October"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/October"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_October"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/LI_November"
+                android:layout_marginLeft="2dp"
+                android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_November"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/November"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:id="@+id/li_November"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+                     <LinearLayout
+                        android:id="@+id/LI_December"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TV_December"
+                            android:layout_width="match_parent"
+                            android:background="@color/colorBackground"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:layout_height="wrap_content"
+                            android:text="@string/December"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <ListView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/li_December"
+                            android:layout_height="wrap_content" >
+                        </ListView>
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/image"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/nodatafoundbanner"/>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/main"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginTop="2dp"
+        android:elevation="6dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:id="@+id/linera"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/packageican"
+                    android:src="@drawable/rnd_logo"
+                     android:layout_height="@dimen/_90sdp"/>
+
+
+                <TextView
+                    android:id="@+id/package_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                     android:gravity="center"
+                    android:text="recycler_viewpackage recycler_viewpackagerecycler_viewpackagerecycler_viewpackage"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/productprise"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/linera"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="cggdgdgfdhfh"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <TextView
+                android:id="@+id/productpoint"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/linera"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:text="cggdgdgfdhfh"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

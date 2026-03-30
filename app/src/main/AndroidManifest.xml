@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.Shakti.Shakti">
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- android:maxSdkVersion="18" -->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity android:name=".ReportAll.Activity.DealerReportActivity"></activity>
+        <activity android:name=".Dashbord.Activity.ViewsitedetailsActivity" />
+        <activity android:name=".Map.MapActivity" />
+        <activity android:name=".ReportAll.Activity.DealerSaleStatusActivity" />
+        <activity android:name=".Dashbord.ui.VarifypurchaseDealerActivity" />
+        <activity android:name=".SubmitPurchase.ui.DealerpurchaseActivity" />
+        <activity android:name=".ReportAll.Activity.ViewprofileActivity" />
+        <activity
+            android:name=".ReportAll.Activity.EditprofileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.KycUpdateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Dashbord.ui.RequesttechexpressActivityBoth"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.DealerAgentsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.DealerPurchaseStatusActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.MyDealerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.MySitesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.PointStatusActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.EarnPointsStatementActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.RedemptionHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReportAll.Activity.PurchaseStatusActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Dashbord.ui.ReportAllActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewAll.View_Detail_four_Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewAll.ViewDetail_therr_Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewAll.ViewDetail_two_Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Setting.RewardRedeemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Dashbord.ui.ViewAllActivity" />
+        <activity android:name=".Setting.NotificationActivity" />
+        <activity android:name=".Dashbord.ui.VerifySiteActivity" />
+        <activity android:name=".SubmitPurchase.ui.ExistingActivity" />
+        <activity android:name=".SubmitPurchase.ui.PurchaseActivity" />
+        <activity android:name=".SubmitPurchase.ui.SubmitPurchaseActivity" />
+        <activity android:name=".SubmitPurchase.ui.ReemallActivity" />
+        <activity android:name=".Dashbord.ui.TermsconditionActivity" />
+        <activity android:name=".Youtube.ui.VideosListActivity" />
+        <activity android:name=".Youtube.ui.RewardListActivity" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_RSaNE7T0U1My4g" />
+
+        <activity
+            android:name=".Dashbord.ui.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SubmitPurchase.ui.MyAccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Register.ui.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Dashbord.ui.MainActivity" />
+        <activity
+            android:name=".ReportAll.Fragment.PointStatesActivityBoth"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Youtube.ui.PlayVideo"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Login.ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|uiMode"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Splash.ui.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyArA_Vr8715j1BIYIEC-8vm5MC77Yv9Tws" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name=".FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name=".Notification.service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Notification.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

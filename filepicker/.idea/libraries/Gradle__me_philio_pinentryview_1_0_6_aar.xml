@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: me.philio:pinentryview:1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/418579644c3e3bc9e6f01e670d656403/pinentryview-1.0.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/418579644c3e3bc9e6f01e670d656403/pinentryview-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/418579644c3e3bc9e6f01e670d656403/pinentryview-1.0.6/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.philio/pinentryview/1.0.6/1903b765dfd5c803447a7a3be73661b7317c590f/pinentryview-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.philio/pinentryview/1.0.6/9b15e044b4e3d8e3ef965e5d22e6c484f5b26b6/pinentryview-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

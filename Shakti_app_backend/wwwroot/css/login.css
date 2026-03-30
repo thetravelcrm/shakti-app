@@ -1,0 +1,68 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+
+
+.outer-area {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: auto;
+    padding: 7em 1em;
+    background: url(/images/login.png);
+    background-size: cover;
+    height: 100%;
+    background-position: 300px -155px;
+    background-repeat: no-repeat;
+}
+
+.outer-area .inner-area .form-sec {
+        width: 45%;
+    }
+
+.outer-area .inner-area .form-sec h3 {
+            font-size: 20px;
+            color: #0080e5;
+        }
+
+.outer-area .inner-area .form-sec p {
+            font-size: 10px;
+            font-size: 13px;
+            color: #b6b3b3;
+        }
+
+.btn-primary {
+    padding: 2px 63px 7px 63px;
+    margin-top: 30px;
+    
+}
+
+.cus-group {
+    margin-top: 50px;
+}
+
+.form-check {
+    right: 18px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 414px) {
+    .outer-area {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: auto;
+        padding: 7em 1em;
+        background-position: 300px -155px;
+        background-repeat: no-repeat;
+    }
+
+        .outer-area .inner-area .form-sec {
+            width: 100% !important;
+        }
+}

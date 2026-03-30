@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect"
+    android:padding="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+             android:background="@drawable/rectnew">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SelectLanguage"
+                android:textStyle="bold"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="X"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+             android:layout_marginLeft="@dimen/_5sdp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+             android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:gravity="center"
+            android:id="@+id/radio_group"
+            android:layout_marginLeft="@dimen/_12sdp" >
+
+            <RadioButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/custom_radio"
+                android:paddingLeft="10dip"
+                android:text="   English"
+                android:gravity="left|center_vertical"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:id="@+id/rb_english"
+                android:checked="false"/>
+
+            <RadioButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/custom_radio"
+                android:paddingLeft="10dip"
+                android:text="    हिंदी"
+                android:gravity="left|center_vertical"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:id="@+id/rb_hindi"/>
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

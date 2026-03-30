@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#eeeef8"
+    tools:context=".SubmitPurchase.ui.PurchaseActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/horizantal"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/viewprofile"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginRight="@dimen/_70sdp"
+        android:orientation="horizontal">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/rect"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:src="@drawable/shaktiviewprofile"
+                android:layout_height="@dimen/_35sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ViewProfile"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/editprofile"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginRight="@dimen/_70sdp"
+        android:orientation="horizontal">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/rect"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:src="@drawable/shaktieditprofile"
+                android:layout_height="@dimen/_35sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EditProfile"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_70sdp"
+                android:layout_marginRight="@dimen/_70sdp"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    android:id="@+id/kycupdate"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/rect"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:src="@drawable/shaktikyc"
+                        android:layout_height="@dimen/_35sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/KYCDetails"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/changepassword"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginRight="@dimen/_70sdp"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/rect"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:src="@drawable/shaktihangepassword"
+                android:layout_height="@dimen/_35sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ChangePassword"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginRight="@dimen/_70sdp"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/ChangeMobileNumber"
+             android:layout_marginRight="@dimen/_2sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/rect"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:src="@drawable/changemobilenumber"
+                android:layout_height="@dimen/_35sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ChangeMobileNumber"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

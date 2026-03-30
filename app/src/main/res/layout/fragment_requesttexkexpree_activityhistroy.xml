@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashbord.ui.RequesttexkexpreeActivityhistroyFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/colorBackground"
+       android:orientation="horizontal">
+
+
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_marginRight="8dp"
+          android:layout_marginLeft="8dp"
+          android:id="@+id/scrrolview"
+          android:layout_height="match_parent">
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+              <HorizontalScrollView
+                  android:layout_width="match_parent"
+                  android:scrollbars="none"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal">
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:layout_marginLeft="@dimen/_2sdp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="170dp"
+                              android:layout_gravity="left"
+                              android:gravity="left"
+                              android:layout_height="wrap_content"
+                              android:text="@string/Date"
+                              android:background="@color/white"
+                              android:textColor="@color/black"
+                              android:textStyle="bold"
+                              android:padding="@dimen/_5sdp"
+                              android:textSize="@dimen/_12sdp"/>
+
+
+
+                          <ListView
+                              android:id="@+id/li_date"
+                              android:layout_width="170dp"
+                              android:background="@color/white"
+                              android:layout_height="wrap_content" >
+
+
+                          </ListView>
+
+
+
+                      </LinearLayout>
+
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:background="@color/white"
+
+                          android:layout_marginLeft="@dimen/_2sdp"
+
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="150dp"
+                              android:layout_gravity="left"
+                              android:gravity="left"
+                              android:layout_height="wrap_content"
+                              android:text="@string/Time"
+                              android:textColor="@color/black"
+                              android:textStyle="bold"
+                              android:padding="@dimen/_5sdp"
+                              android:textSize="@dimen/_12sdp"/>
+
+
+
+                          <ListView
+                              android:id="@+id/li_time"
+                              android:layout_width="150dp"
+                              android:layout_height="wrap_content" >
+                          </ListView>
+
+
+
+                      </LinearLayout>
+
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:background="@color/white"
+
+                          android:layout_marginLeft="@dimen/_2sdp"
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="150dp"
+                              android:layout_gravity="left"
+                              android:gravity="left"
+                              android:layout_height="wrap_content"
+                              android:text="@string/ContactPerson"
+                              android:textColor="@color/black"
+                              android:textStyle="bold"
+                              android:padding="@dimen/_5sdp"
+                              android:textSize="@dimen/_12sdp"/>
+
+
+
+                          <ListView
+                              android:id="@+id/li_name"
+                              android:layout_width="150dp"
+                              android:layout_height="wrap_content" >
+                          </ListView>
+
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:background="@color/white"
+
+                          android:layout_marginLeft="@dimen/_2sdp"
+
+                          android:orientation="vertical">
+
+                          <TextView
+                              android:layout_width="150dp"
+                              android:layout_gravity="left"
+                              android:gravity="left"
+                              android:layout_height="wrap_content"
+                              android:text="@string/Contactpersonno."
+                              android:textColor="@color/black"
+                              android:textStyle="bold"
+                              android:padding="@dimen/_5sdp"
+                              android:textSize="@dimen/_12sdp"/>
+
+
+
+                          <ListView
+                              android:id="@+id/li_mobile"
+                              android:layout_width="150dp"
+                              android:layout_height="wrap_content" >
+                          </ListView>
+
+
+
+                      </LinearLayout>
+
+
+
+
+                  </LinearLayout>
+
+
+
+              </HorizontalScrollView>
+
+
+
+          </LinearLayout>
+      </ScrollView>
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:id="@+id/image"
+           android:visibility="gone"
+           android:gravity="center"
+           android:layout_height="match_parent"
+           android:padding="@dimen/_15sdp"
+           android:layout_gravity="center"
+           android:src="@drawable/nodatafoundbanner"/>
+
+   </LinearLayout>
+
+</FrameLayout>

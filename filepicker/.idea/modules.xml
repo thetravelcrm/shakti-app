@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1796244695/PubDeals.iml" filepath="$PROJECT_DIR$/.idea/modules/-1796244695/PubDeals.iml" group="PubDeals" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1293063739/app.iml" filepath="$PROJECT_DIR$/.idea/modules/1293063739/app.iml" group="PubDeals/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker.iml" group="PubDeals/filepicker" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashbord.ui.ReportAllActivity">
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_below="@+id/toolbar"
+       android:layout_height="match_parent">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:paddingBottom="@dimen/_10sdp">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="@dimen/_5sdp"
+               android:id="@+id/agentreport"
+               android:visibility="visible"
+               android:orientation="vertical">
+
+
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/PurchaseStatus"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktipurchasestatus"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/PurchaseStatus"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/RedemptionHistory"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktiredemptionhistory"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/RedemptionHistory"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:id="@+id/EarnPointsStatement"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktiearnpointsstatemen"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/EarnPointsStatement"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:id="@+id/PointStatus"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktipointstatus"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/PointStatus"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:id="@+id/MySites"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktimysites"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/MySites"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:id="@+id/MyDealer"
+                   android:gravity="left"
+                   android:visibility="gone"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shakti_dealers"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:text="@string/Dealer"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"
+                       android:textStyle="normal" />
+
+
+
+               </LinearLayout>
+
+
+
+
+
+           </LinearLayout>
+
+
+
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:id="@+id/dealerPurchaseStatus"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktipurchasereports"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/PurchaseReport"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+
+               </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/dealerSaleStatus"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:elevation="@dimen/_2sdp"
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               android:layout_marginLeft="@dimen/_10sdp"
+               android:layout_marginRight="@dimen/_10sdp"
+               android:padding="@dimen/_5sdp"
+               android:background="@drawable/rect"
+               android:backgroundTint="@color/white"
+               android:layout_gravity="center"
+               android:gravity="left"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/_35sdp"
+                   android:src="@drawable/shaktsalereport"
+                   android:layout_height="@dimen/_35sdp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/SaleReport"
+                   android:textStyle="normal"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp"/>
+
+
+
+
+           </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:elevation="@dimen/_2sdp"
+                   android:layout_width="match_parent"
+                   android:layout_weight="1"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:padding="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:backgroundTint="@color/white"
+                   android:layout_gravity="center"
+                   android:id="@+id/mySitesdealer"
+                   android:gravity="left"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:src="@drawable/shaktimysites"
+                       android:layout_height="@dimen/_35sdp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/VerifiedSites"
+                        android:textStyle="normal"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp"/>
+
+
+
+               </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/dealerAgents"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:elevation="@dimen/_2sdp"
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               android:layout_marginLeft="@dimen/_10sdp"
+               android:layout_marginRight="@dimen/_10sdp"
+               android:padding="@dimen/_5sdp"
+               android:background="@drawable/rect"
+               android:backgroundTint="@color/white"
+               android:layout_gravity="center"
+               android:gravity="left"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/_35sdp"
+                   android:src="@drawable/shakti_agents"
+                   android:layout_height="@dimen/_35sdp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/Agent"
+                   android:textStyle="normal"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp"/>
+
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/dealerlist"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:elevation="@dimen/_2sdp"
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               android:layout_marginLeft="@dimen/_10sdp"
+               android:layout_marginRight="@dimen/_10sdp"
+               android:padding="@dimen/_5sdp"
+               android:background="@drawable/rect"
+               android:backgroundTint="@color/white"
+               android:layout_gravity="center"
+               android:gravity="left"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="@dimen/_35sdp"
+                   android:src="@drawable/shakti_dealers"
+                   android:layout_height="@dimen/_35sdp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/Dealer"
+                   android:textStyle="normal"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp"/>
+
+
+
+           </LinearLayout>
+
+
+
+
+       </LinearLayout>
+
+
+   </ScrollView>
+
+</RelativeLayout>

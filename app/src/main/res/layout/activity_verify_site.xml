@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".Dashbord.ui.VerifySiteActivity">
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+             android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/rzp_border"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/imageclick"
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:background="@drawable/rectbackgra"
+                    android:layout_height="330dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text=""
+                    android:visibility="gone"
+                    android:id="@+id/sitepic"
+                    android:textSize="@dimen/_11sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/chooseaadharcard"
+                    android:layout_alignParentRight="true"
+                    android:text="  Choose   "
+                    android:visibility="gone"
+
+                    android:textColor="@color/white"
+                    android:background="@drawable/rectbackgra"
+                    android:backgroundTint="@color/green"
+                    android:textSize="@dimen/_13sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_height="100dp"/>
+
+
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/rect"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="center"
+                android:id="@+id/radio_group"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp">
+
+                <RadioButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/custom_radio"
+                    android:paddingLeft="10dip"
+                    android:text="   Approve"
+                    android:gravity="left|center_vertical"
+
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:id="@+id/rb_Approve"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/custom_radio"
+                    android:paddingLeft="10dip"
+                    android:text="   Reject"
+                    android:gravity="left|center_vertical"
+
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:id="@+id/rb_Reject"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect"
+
+                android:layout_margin="@dimen/_10sdp">
+
+
+                <EditText
+                    android:id="@+id/SubAdminRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Remark.."
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16.3dp"
+                    android:paddingTop="9.7dp"
+                    android:paddingBottom="9.7dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/back_bg"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:id="@+id/bt_approve"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/roundbtn"
+                    android:backgroundTint="@color/green_bg"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="APPROVE"
+                    android:layout_alignParentBottom="true"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:id="@+id/bt_reject"
+                    android:textSize="17sp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/roundbtn"
+                    android:backgroundTint="@color/red"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="REJECT"
+                    android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btsubmit"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbtn"
+        android:backgroundTint="@color/button_color"
+        android:text="Submit"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+
+</LinearLayout>

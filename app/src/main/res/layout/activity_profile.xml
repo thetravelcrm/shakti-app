@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/backgroundscreen"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/customerimage"
+                        android:layout_width="100dp"
+                         android:layout_height="100dp"
+                        android:src="@drawable/customer_support"
+                        app:civ_border_color="@color/back_bg"
+                        app:civ_border_width="1dp"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_edit_black_24dp"/>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditProfile"
+                    android:visibility="gone"
+                    android:background="@drawable/rect"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_edit_black_24dp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:text="Edit Profile" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                     android:background="@drawable/rect"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:id="@+id/leadsaccepte"
+                    android:drawableLeft="@drawable/ic_accept"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:text="Accepted Leads" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect"
+                    android:drawableLeft="@drawable/ic_room_service_black_24dp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="15dp"
+                    android:text="Services" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/aboutus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_create_new_folder_black_24dp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:padding="15dp"
+                    android:background="@drawable/rect"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="About Us" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Privacypolicy"
+                    android:padding="15dp"
+                    android:background="@drawable/rect"
+                    android:drawableLeft="@drawable/ic_security_black_24dp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Contact Us" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/Walletpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_wallet"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:background="@drawable/rect"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Wallet/Payments" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_share_black_24dp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:background="@drawable/rect"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Refer a friend" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_logout"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/back_bg"
+                    android:background="@drawable/rect"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="Logout" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

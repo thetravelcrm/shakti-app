@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/colorPrimary">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:layout_height="100dp"
+        android:src="@drawable/customer_support"
+        app:civ_border_color="@color/back_bg"
+        android:layout_marginBottom="@dimen/_30sdp"
+        app:civ_border_width="1dp"/>
+
+
+    <TextView
+        android:layout_below="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="asasasdsdsadddd"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="15sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/userName" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_marginLeft="5sp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:layout_below="@+id/number"
+            android:text=""
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/email" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
