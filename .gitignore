@@ -1,14 +1,24 @@
+# Flutter
+shakti_flutter/.dart_tool/
+shakti_flutter/.packages
+shakti_flutter/build/
+shakti_flutter/android/
+shakti_flutter/ios/
+shakti_flutter/web/
+shakti_flutter/.flutter-plugins
+shakti_flutter/.flutter-plugins-dependencies
+shakti_flutter/pubspec.lock
+
+# IDE
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+.vscode/
+
+# OS
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+Thumbs.db
+
+# Secrets
+*.jks
+*.keystore
+*.env
