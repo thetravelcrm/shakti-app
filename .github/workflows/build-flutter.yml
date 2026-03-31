@@ -49,20 +49,20 @@ jobs:
           # Set app label
           sed -i 's/android:label="[^"]*"/android:label="Shakti"/' "$MANIFEST"
 
-          # Set minSdk to 21 in app/build.gradle
+          # Set SDK versions in app/build.gradle (compileSdk 35 required by flutter_plugin_android_lifecycle)
           BUILD_GRADLE="android/app/build.gradle"
           sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 21/' "$BUILD_GRADLE"
-          sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 34/' "$BUILD_GRADLE"
-          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 34/' "$BUILD_GRADLE"
+          sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 35/' "$BUILD_GRADLE"
+          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 35/' "$BUILD_GRADLE"
 
-          # Upgrade Kotlin version in root build.gradle (image_picker requires 1.8+)
-          ROOT_GRADLE="android/build.gradle"
-          sed -i "s/ext.kotlin_version = '[^']*'/ext.kotlin_version = '1.9.0'/" "$ROOT_GRADLE"
-          # Also handle settings.gradle style projects
-          sed -i "s/kotlin_version = '[^']*'/kotlin_version = '1.9.0'/" "$ROOT_GRADLE" 2>/dev/null || true
+          # Upgrade Kotlin in settings.gradle (Flutter 3.19+ stores it in plugins block there)
+          SETTINGS_GRADLE="android/settings.gradle"
+          sed -i 's/id "org.jetbrains.kotlin.android" version "[^"]*"/id "org.jetbrains.kotlin.android" version "1.9.22"/' "$SETTINGS_GRADLE"
+          # Fallback: also update build.gradle ext.kotlin_version for older layout
+          sed -i "s/ext.kotlin_version = '[^']*'/ext.kotlin_version = '1.9.22'/" android/build.gradle 2>/dev/null || true
 
-          echo "=== root build.gradle ==="
-          cat "$ROOT_GRADLE"
+          echo "=== settings.gradle ==="
+          cat "$SETTINGS_GRADLE"
           echo "=== app/build.gradle ==="
           cat "$BUILD_GRADLE"
 
