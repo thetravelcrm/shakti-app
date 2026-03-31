@@ -1,0 +1,67 @@
+name: Build Shakti Flutter APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shakti_flutter/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: shakti_flutter
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Bootstrap Flutter project
+        run: |
+          # Create a temp Flutter project to get android/ scaffolding
+          cd /tmp
+          flutter create --org com.shakti --project-name shakti_app shakti_temp
+
+          # Copy android/ folder to our project if it doesn't exist
+          cd $GITHUB_WORKSPACE/shakti_flutter
+          if [ ! -f "android/app/build.gradle" ]; then
+            cp -r /tmp/shakti_temp/android .
+            cp -r /tmp/shakti_temp/test .
+            cp /tmp/shakti_temp/analysis_options.yaml . 2>/dev/null || true
+          fi
+
+          # Ensure assets directory exists
+          mkdir -p assets/images
+          touch assets/images/.gitkeep
+
+          # Update Android manifest for internet permission
+          sed -i 's|<application|<uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>\n    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>\n    <uses-permission android:name="android.permission.CAMERA"/>\n    <application|' android/app/src/main/AndroidManifest.xml
+
+          # Set minSdk to 21
+          sed -i 's/minSdk = .*/minSdk = 21/' android/app/build.gradle 2>/dev/null || true
+          sed -i 's/minSdkVersion .*/minSdkVersion 21/' android/app/build.gradle 2>/dev/null || true
+
+          # Enable multidex
+          grep -q "multiDexEnabled" android/app/build.gradle || sed -i '/minSdk/a\            multiDexEnabled true' android/app/build.gradle
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: shakti-debug-apk
+          path: shakti_flutter/build/app/outputs/flutter-apk/app-debug.apk

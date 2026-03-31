@@ -1,0 +1,97 @@
+name: Build Shakti Flutter APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shakti_flutter/**'
+      - '.github/workflows/build-flutter.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Bootstrap Flutter Android project
+        working-directory: shakti_flutter
+        run: |
+          # Create a temp Flutter project to get android/ scaffolding
+          cd /tmp
+          flutter create --org com.shakti --project-name shakti_app shakti_temp
+
+          # Copy android/ and other scaffolding to our project
+          cd $GITHUB_WORKSPACE/shakti_flutter
+          cp -r /tmp/shakti_temp/android .
+          cp -r /tmp/shakti_temp/test . 2>/dev/null || true
+          cp /tmp/shakti_temp/analysis_options.yaml . 2>/dev/null || true
+          cp /tmp/shakti_temp/l10n.yaml . 2>/dev/null || true
+
+          # Ensure assets directory exists
+          mkdir -p assets/images
+          touch assets/images/.gitkeep
+
+      - name: Configure Android settings
+        working-directory: shakti_flutter
+        run: |
+          # Add permissions to AndroidManifest.xml
+          MANIFEST="android/app/src/main/AndroidManifest.xml"
+          if ! grep -q "INTERNET" "$MANIFEST"; then
+            sed -i 's|<manifest|<manifest xmlns:tools="http://schemas.android.com/tools"|' "$MANIFEST" 2>/dev/null || true
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.INTERNET"/>' "$MANIFEST"
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>' "$MANIFEST"
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>' "$MANIFEST"
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.CAMERA"/>' "$MANIFEST"
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>' "$MANIFEST"
+            sed -i '/<application/i\    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>' "$MANIFEST"
+          fi
+
+          # Set minSdk to 21 and enable multidex
+          BUILD_GRADLE="android/app/build.gradle"
+          sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 21/' "$BUILD_GRADLE" 2>/dev/null || true
+          sed -i '/minSdk/a\        multiDexEnabled = true' "$BUILD_GRADLE" 2>/dev/null || true
+
+          # Add network security config for shaktiapp.mooo.com
+          mkdir -p android/app/src/main/res/xml
+          cat > android/app/src/main/res/xml/network_security_config.xml << 'XMLEOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <network-security-config>
+              <base-config cleartextTrafficPermitted="false">
+                  <trust-anchors>
+                      <certificates src="system" />
+                  </trust-anchors>
+              </base-config>
+              <domain-config cleartextTrafficPermitted="false">
+                  <domain includeSubdomains="true">shaktiapp.mooo.com</domain>
+                  <trust-anchors>
+                      <certificates src="system" />
+                      <certificates src="user" />
+                  </trust-anchors>
+              </domain-config>
+          </network-security-config>
+          XMLEOF
+
+      - name: Get dependencies
+        working-directory: shakti_flutter
+        run: flutter pub get
+
+      - name: Build Debug APK
+        working-directory: shakti_flutter
+        run: flutter build apk --debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: shakti-flutter-debug-apk
+          path: shakti_flutter/build/app/outputs/flutter-apk/app-debug.apk
