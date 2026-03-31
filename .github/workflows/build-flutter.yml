@@ -66,15 +66,17 @@ jobs:
         working-directory: /tmp/shakti_base
         run: cat android/app/build.gradle
 
-      - name: Build Debug APK
+      - name: Build Debug APK (Gradle direct for full error output)
         working-directory: /tmp/shakti_base
         run: |
-          flutter build apk --debug --no-shrink --verbose 2>&1 | tee /tmp/build_log.txt; BUILD_EXIT=${PIPESTATUS[0]}
-          echo "=== ERRORS AND WARNINGS ==="
-          grep -E "error:|warning:|Error:|e:.*\.kt|\.java.*error" /tmp/build_log.txt || true
-          echo "=== LAST 50 LINES ==="
-          tail -50 /tmp/build_log.txt
-          exit $BUILD_EXIT
+          flutter pub get
+          cd android
+          ./gradlew assembleDebug 2>&1 | tee /tmp/gradle_raw.txt; GRADLE_EXIT=${PIPESTATUS[0]}
+          echo "=== KOTLIN/JAVA ERRORS ==="
+          grep -E "^e:|^w:|error:|\.kt:[0-9]|\.java:[0-9]|Unresolved|Cannot find|does not exist" /tmp/gradle_raw.txt || echo "No pattern matches found"
+          echo "=== LAST 80 LINES ==="
+          tail -80 /tmp/gradle_raw.txt
+          exit $GRADLE_EXIT
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
