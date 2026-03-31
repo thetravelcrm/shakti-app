@@ -62,9 +62,13 @@ jobs:
         working-directory: /tmp/shakti_base
         run: flutter pub get
 
+      - name: Show app build.gradle
+        working-directory: /tmp/shakti_base
+        run: cat android/app/build.gradle
+
       - name: Build Debug APK
         working-directory: /tmp/shakti_base
-        run: flutter build apk --debug --verbose 2>&1 | tail -50
+        run: flutter build apk --debug --no-shrink --verbose 2>&1 | tail -100
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
