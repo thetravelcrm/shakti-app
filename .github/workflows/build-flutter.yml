@@ -21,7 +21,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
+          flutter-version: '3.22.3'
           channel: 'stable'
 
       - name: Create full Flutter project
@@ -49,11 +49,11 @@ jobs:
           # Set app label
           sed -i 's/android:label="[^"]*"/android:label="Shakti"/' "$MANIFEST"
 
-          # Set SDK versions in app/build.gradle (compileSdk 35 required by flutter_plugin_android_lifecycle)
+          # Set SDK versions in app/build.gradle
           BUILD_GRADLE="android/app/build.gradle"
           sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 21/' "$BUILD_GRADLE"
-          sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 35/' "$BUILD_GRADLE"
-          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 35/' "$BUILD_GRADLE"
+          sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 34/' "$BUILD_GRADLE"
+          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 34/' "$BUILD_GRADLE"
 
           # Upgrade Kotlin in settings.gradle (Flutter 3.19+ stores it in plugins block there)
           SETTINGS_GRADLE="android/settings.gradle"
@@ -65,12 +65,6 @@ jobs:
           cat "$SETTINGS_GRADLE"
           echo "=== app/build.gradle ==="
           cat "$BUILD_GRADLE"
-
-      - name: Install Android SDK 35
-        run: |
-          yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
-            "platforms;android-35" \
-            "build-tools;35.0.0" 2>&1 | tail -5
 
       - name: Get dependencies
         working-directory: /tmp/shakti_base
