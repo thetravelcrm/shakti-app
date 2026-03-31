@@ -100,12 +100,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
   }
 
   Future<ApiResponse> loginWithPassword(String mobile, String password) async {
+    final fcmToken = _prefs.getString(Constants.keyToken) ?? '';
     final response = await _api.post(
       ApiEndpoints.loginWithPassword,
       {
         'mobileNo': mobile,
         'password': password,
         'userType': '0',
+        'FCMToken': fcmToken,
       },
       injectAuth: false,
     );
@@ -125,12 +127,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
   }
 
   Future<ApiResponse> loginWithOTP(String mobile, String otp, String session) async {
+    final fcmToken = _prefs.getString(Constants.keyToken) ?? '';
     final response = await _api.post(
       ApiEndpoints.loginWithOTP,
       {
         'mobileNo': mobile,
         'otp': otp,
         'session': session,
+        'FCMToken': fcmToken,
       },
       injectAuth: false,
     );
