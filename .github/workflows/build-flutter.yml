@@ -66,6 +66,12 @@ jobs:
           echo "=== app/build.gradle ==="
           cat "$BUILD_GRADLE"
 
+      - name: Install Android SDK 35
+        run: |
+          yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-35" \
+            "build-tools;35.0.0" 2>&1 | tail -5
+
       - name: Get dependencies
         working-directory: /tmp/shakti_base
         run: flutter pub get
