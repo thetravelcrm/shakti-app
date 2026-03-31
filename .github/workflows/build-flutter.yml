@@ -49,12 +49,20 @@ jobs:
           # Set app label
           sed -i 's/android:label="[^"]*"/android:label="Shakti"/' "$MANIFEST"
 
-          # Set minSdk to 21 in build.gradle
+          # Set minSdk to 21 in app/build.gradle
           BUILD_GRADLE="android/app/build.gradle"
           sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 21/' "$BUILD_GRADLE"
           sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 34/' "$BUILD_GRADLE"
           sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 34/' "$BUILD_GRADLE"
 
+          # Upgrade Kotlin version in root build.gradle (image_picker requires 1.8+)
+          ROOT_GRADLE="android/build.gradle"
+          sed -i "s/ext.kotlin_version = '[^']*'/ext.kotlin_version = '1.9.0'/" "$ROOT_GRADLE"
+          # Also handle settings.gradle style projects
+          sed -i "s/kotlin_version = '[^']*'/kotlin_version = '1.9.0'/" "$ROOT_GRADLE" 2>/dev/null || true
+
+          echo "=== root build.gradle ==="
+          cat "$ROOT_GRADLE"
           echo "=== app/build.gradle ==="
           cat "$BUILD_GRADLE"
 
@@ -62,21 +70,9 @@ jobs:
         working-directory: /tmp/shakti_base
         run: flutter pub get
 
-      - name: Show app build.gradle
+      - name: Build Debug APK
         working-directory: /tmp/shakti_base
-        run: cat android/app/build.gradle
-
-      - name: Build Debug APK (Gradle direct for full error output)
-        working-directory: /tmp/shakti_base
-        run: |
-          flutter pub get
-          cd android
-          ./gradlew assembleDebug 2>&1 | tee /tmp/gradle_raw.txt; GRADLE_EXIT=${PIPESTATUS[0]}
-          echo "=== KOTLIN/JAVA ERRORS ==="
-          grep -E "^e:|^w:|error:|\.kt:[0-9]|\.java:[0-9]|Unresolved|Cannot find|does not exist" /tmp/gradle_raw.txt || echo "No pattern matches found"
-          echo "=== LAST 80 LINES ==="
-          tail -80 /tmp/gradle_raw.txt
-          exit $GRADLE_EXIT
+        run: flutter build apk --debug --no-shrink 2>&1
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
